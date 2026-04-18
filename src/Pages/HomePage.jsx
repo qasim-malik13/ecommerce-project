@@ -1,14 +1,25 @@
 import "./HomePage.css";
 import Header from "../components/Header";
 import { products } from "../../starting-files/data/products";
+import axios from "axios";
 
 export default function HomePage() {
+
+  // Using Fetch API to get products data from the backend server
+ /*
   fetch("http://localhost:3000/api/products").then((response) => {
     return response.json()
   }).then((data) => {
       console.log(data);
     });
-    
+    */
+
+  // Using Axios to get products data from the backend server
+  axios.get("http://localhost:3000/api/products")
+  .then((response) => {
+    console.log(response.data);
+  });
+
   return (
     <>
       <Header />
