@@ -13,7 +13,7 @@ const Product = ({ product, loadCart }) => {
     await loadCart();
   };
 
-  const selectQiuantity = (e) => {
+  const selectQuantity = (e) => {
     const quantitySelected = Number(e.target.value);
     setQuantity(quantitySelected);
   };
@@ -40,7 +40,7 @@ const Product = ({ product, loadCart }) => {
       <div
         className="product-quantity-container"
         value={quantity}
-        onChange={selectQiuantity}
+        onChange={selectQuantity}
       >
         <select>
           <option value="1">1</option>
