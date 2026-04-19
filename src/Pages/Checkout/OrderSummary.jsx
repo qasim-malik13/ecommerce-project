@@ -25,7 +25,7 @@ const OrderSummary = ({ cart, deliveryOptions }) => {
               <div className="cart-item-details-grid">
                 <img
                   className="product-image"
-                  src="images/products/athletic-cotton-socks-6-pairs.jpg"
+                  src={cartItem.product.image}
                 />
 
                 <div className="cart-item-details">
