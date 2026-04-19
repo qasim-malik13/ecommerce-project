@@ -36,7 +36,7 @@ function CheckoutPage({ cart, loadCart }) {
           <div className="checkout-header-middle-section">
             Checkout (
             <a className="return-to-home-link" href="/">
-              3 items
+              {cart.length} {cart.length === 1 ? "item" : "items"}
             </a>
             )
           </div>
