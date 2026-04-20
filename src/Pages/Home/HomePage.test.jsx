@@ -1,7 +1,6 @@
 import { it, describe, vi, expect, beforeEach } from "vitest";
 import HomePage from "./HomePage";
 import { render, screen, within } from "@testing-library/react";
-import userEvent from "@testing-library/user-event";
 import axios from "axios";
 import { MemoryRouter } from "react-router";
 
@@ -57,9 +56,13 @@ describe("HomePage component", () => {
     expect(productContainers.length).toBe(2);
 
     expect(
-    within(productContainers[0]).getByText('Black and Gray Athletic Cotton Socks - 6 Pairs')).toBeInTheDocument();
+      within(productContainers[0]).getByText(
+        "Black and Gray Athletic Cotton Socks - 6 Pairs",
+      ),
+    ).toBeInTheDocument();
 
     expect(
-    within(productContainers[1]).getByText('Intermediate Size Basketball')).toBeInTheDocument();
+      within(productContainers[1]).getByText("Intermediate Size Basketball"),
+    ).toBeInTheDocument();
   });
 });
